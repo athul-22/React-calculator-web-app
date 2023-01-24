@@ -14,7 +14,7 @@ background-color: black;
 
 .cal-grid{
     border: 70px solid black;
-    border-radius: 90px;
+    border-radius:100px;
     background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -33,9 +33,11 @@ background-color: black;
 }
 
 .main > button {
+    height: 80px;
+    width: 80px;
     color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 50px;
     margin-left: 2px;
     margin-right: 2px;

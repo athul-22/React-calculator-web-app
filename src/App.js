@@ -6,6 +6,7 @@ import { useReducer } from 'react';
 import DigitBtn from './DigitButton';
 import OperationBtn from './OperationButton';
 
+
 export const ACTIONS = {
   ADD_DIGIT : 'add-digit',
   CHOOSE_OPERATION : 'choose-operation',
@@ -13,6 +14,8 @@ export const ACTIONS = {
   DELETE_DIGIT : 'delete-digit',
   EVALUATE : 'evaluate'
 }
+
+
 
 function reducer(state,{type , payload}){
   switch(type) {
@@ -101,12 +104,16 @@ function evaluate({currentOperand,previousOperand,operation}){
 }
 
 
+
 function App() {
 
+
+// MAIN CALCULATION FUNCTION  
 const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reducer,{})
 
 
   return (
+   <div>
     <div className="cal-grid">
       <div className="main">
       <div className='output'>
@@ -133,6 +140,7 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
       <DigitBtn digit="0" dispatch={dispatch} />
       <button className="span-2 main-btn" onClick={() => dispatch({type:ACTIONS.EVALUATE})}>=</button>
       </div>
+    </div>
     </div>
   )
 }
