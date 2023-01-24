@@ -5,6 +5,7 @@ import  {Component} from "react";
 import { useReducer } from 'react';
 import DigitBtn from './DigitButton';
 import OperationBtn from './OperationButton';
+import ToggleBtn from './ToggleBtn';
 
 
 export const ACTIONS = {
@@ -14,8 +15,6 @@ export const ACTIONS = {
   DELETE_DIGIT : 'delete-digit',
   EVALUATE : 'evaluate'
 }
-
-
 
 function reducer(state,{type , payload}){
   switch(type) {
@@ -57,7 +56,6 @@ function reducer(state,{type , payload}){
         currentOperand: null
       }
 
-
       case ACTIONS.CLEAR:
         return{}
 
@@ -72,9 +70,8 @@ function reducer(state,{type , payload}){
           operation:null,
           currentOperand: evaluate(state),
         }
-
-  }
-} 
+      }
+     } 
 
 function evaluate({currentOperand,previousOperand,operation}){
 
@@ -114,6 +111,7 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
 
   return (
    <div>
+    <ToggleBtn/>
     <div className="cal-grid">
       <div className="main">
       <div className='output'>
