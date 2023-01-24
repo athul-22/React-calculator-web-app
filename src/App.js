@@ -114,7 +114,7 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
         <div className='current-operand'>{currentOperand}</div>
       </div>
       <button className='span-2' onClick={() => dispatch({type:ACTIONS.CLEAR}) }>AC</button>
-      <button className='del'>DEL</button>
+      <button className='del' onClick={() => dispatch({type:ACTIONS.CLEAR})}>DEL</button>
       
       <OperationBtn operation="/" dispatch={dispatch} />
       <DigitBtn digit="1" dispatch={dispatch} />

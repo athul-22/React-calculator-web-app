@@ -7,6 +7,11 @@ body {
 background-color: black;    
 }
 
+.operationButton{
+    color: black;
+    background-color: orange;
+}
+
 .cal-grid{
     border: 70px solid black;
     border-radius: 90px;
