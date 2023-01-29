@@ -5,7 +5,7 @@ import  {Component} from "react";
 import { useReducer } from 'react';
 import DigitBtn from './DigitButton';
 import OperationBtn from './OperationButton';
-import ToggleBtn from './ToggleBtn';
+import ToggleBtn from './DarkMode/ToggleBtn';
 
 
 export const ACTIONS = {
