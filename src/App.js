@@ -110,7 +110,7 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
 
 
   return (
-   <div>
+   <div className="main">
     <ToggleBtn/>
     <div className="cal-grid">
       <div className="main">
