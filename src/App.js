@@ -99,14 +99,9 @@ function evaluate({currentOperand,previousOperand,operation}){
   return computation.toString()
 }
 
-
-
 function App() {
-
-
 // MAIN CALCULATION FUNCTION  
 const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reducer,{})
-
 
   return (
    <div className="main">
@@ -131,10 +126,12 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
       <DigitBtn digit="5" dispatch={dispatch} />
       <DigitBtn digit="6" dispatch={dispatch} />
       <OperationBtn operation="+" dispatch={dispatch} />
+        
       <DigitBtn digit="7" dispatch={dispatch} />
       <DigitBtn digit="8" dispatch={dispatch} />
       <DigitBtn digit="9" dispatch={dispatch} />
       <OperationBtn operation="-" dispatch={dispatch} />
+        
       <DigitBtn digit="." dispatch={dispatch} />
       <DigitBtn digit="0" dispatch={dispatch} />
       <button className="span-2 main-btn" onClick={() => dispatch({type:ACTIONS.EVALUATE})}>=</button>
