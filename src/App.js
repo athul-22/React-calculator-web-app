@@ -7,7 +7,6 @@ import DigitBtn from './DigitButton';
 import OperationBtn from './OperationButton';
 import ToggleBtn from './DarkMode/ToggleBtn';
 
-
 export const ACTIONS = {
   ADD_DIGIT : 'add-digit',
   CHOOSE_OPERATION : 'choose-operation',
@@ -122,10 +121,12 @@ const [{currentOperand, previousOperand, operation},dispatch] = useReducer(reduc
       <button className='del' onClick={() => dispatch({type:ACTIONS.CLEAR})}>DEL</button>
       
       <OperationBtn operation="/" dispatch={dispatch} />
+        
       <DigitBtn digit="1" dispatch={dispatch} />
       <DigitBtn digit="2" dispatch={dispatch} />
       <DigitBtn digit="3" dispatch={dispatch} />
       <OperationBtn operation="*" dispatch={dispatch} />
+        
       <DigitBtn digit="4" dispatch={dispatch} />
       <DigitBtn digit="5" dispatch={dispatch} />
       <DigitBtn digit="6" dispatch={dispatch} />
